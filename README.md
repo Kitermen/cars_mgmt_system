@@ -19,3 +19,11 @@ Lista funkcjonalności:
   4. Wyszukiwanie samochodu po atrybucie
   5. Zmiana Status_techniczny;Dostepnosc;Przebieg;:Sposob_rozliczenia po ID (część edycji)
 
+Podziłą zadań:
+1. Maciej Matuszczyk - stworzenie main.json i dodanie testowych danych, przygotowanie i wklejenie metod do obsługi jsona
+2. Aleksander Urban - pozątek kodu, utrzymanie wstępnej estetyki i składni zapisu (zaczyna od wędrujących opcji switch)
+3. Michał Żądło - stworzenie klasy (i generalnie przygotowanie klas)
+4. Yurii Tsal-Tsalko -stworzenie rent.json i dodanie testowych danych
+
+Estetyka:
+for(){ tak, for () { nie
