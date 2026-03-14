@@ -18,5 +18,5 @@ Lista funkcjonalności:
   3. Wynajęcie / zwrot samochodu
   4. Wyszukiwanie samochodu po atrybucie
   5. Zmiana Status_techniczny;Dostepnosc;Przebieg;:Sposob_rozliczenia po ID (część edycji)
-
+test
 
