@@ -11,7 +11,7 @@ Kolumny bazy danych samochody: ID;Marka;Model;Typ;Rok;Status_techniczny;Dostepno
 Kolumny bazy danych osoby: ID;imie;nazwisko
 Kolumny bazy danych relacje: ID;osoby(id);samochod(id)
 
-Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .db
+Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .json
 
 Lista funkcjonalności: 
   1. Wyświetlenie wszystkich pojazdów
