@@ -6,3 +6,6 @@ Temat 5: System Zarządzania Flotą Pojazdów (Wypożyczalnia)
 ========================================================================================
 
 Członkowie projektu: Maciej Matuszczyk(L), Aleksander Urban, Michał Żądło, Yurii Tsal-Tsalko
+
+Kolumny bazy danych: ID;Marka;Model;Typ;Rok;Stan;Status_techniczny;Przebieg;Historia_wypożyczeń:Sposób_rozliczenia
+Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .csv oraz biblioteki rapidcsv.h do obsługi bazy danych jako najbardziej kompaktowego rozwiązania
