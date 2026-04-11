@@ -1,0 +1,10 @@
+"ID": 1,
+"Marka": "Toyota",
+"Model": "Corolla",
+"Typ": "Sedan",
+"Rok": 2018,
+"Status_techniczny": "Dobry",
+"Dostepnosc": "Dostepny",
+"userID": 2
+"Przebieg": 85000,
+"Sposob_rozliczenia": "Gotowka"
