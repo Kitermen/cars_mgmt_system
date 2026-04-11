@@ -1,7 +1,7 @@
 "ID": 1,
 "Marka": "Toyota",
 "Model": "Corolla",
-"Typ": "Sedan",
+"Nadwozie": "Sedan",
 "Rok": 2018,
 "Status_techniczny": "Dobry",
 "Dostepnosc": "Dostepny",
