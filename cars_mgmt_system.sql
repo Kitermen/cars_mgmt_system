@@ -20,7 +20,6 @@ CREATE TABLE cars (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     Marka TEXT NOT NULL,
     Model TEXT NOT NULL,
-    Nadwozie TEXT,
     Rok INTEGER,
     Status_techniczny TEXT,
     Dostepnosc TEXT,
@@ -36,6 +35,6 @@ INSERT INTO users (firstName, lastName, phone, email) VALUES
 ('Anna', 'Nowak', '+48 511 222 333', 'anna.nowak@example.com');
 
 -- Przykładowe samochody
-INSERT INTO cars (Marka, Model, Nadwozie, Rok, Status_techniczny, Dostepnosc, userID, Przebieg, Sposob_rozliczenia) VALUES
-('Toyota', 'Corolla', 'Sedan', 2018, 'Dobry', 'Dostepny', 2, 85000, 'Gotowka'),
-('Volkswagen', 'Golf', 'Hatchback', 2020, 'Nowy', 'Dostepny', NULL, 30000, 'Karta');   
+INSERT INTO cars (Marka, Model, Rok, Status_techniczny, Dostepnosc, userID, Przebieg, Sposob_rozliczenia) VALUES
+('Toyota', 'Corolla', 2018, 'Dobry', 'Dostepny', 2, 85000, 'Gotowka'),
+('Volkswagen', 'Golf', 2020, 'Nowy', 'Dostepny', NULL, 30000, 'Karta');   
