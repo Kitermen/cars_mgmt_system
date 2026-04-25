@@ -22,6 +22,7 @@ protected:
 public:
     Pojazd(string marka, string model, string rok, string status_techniczny, string dostepnosc, int przebieg, string sposob_rozl) 
     :marka(marka), model(model), rok(rok), status_techniczny(status_techniczny), dostepnosc(dostepnosc), przebieg(przebieg), sposob_rozl(sposob_rozl)  {}
+    virtual ~Pojazd() = default;
     virtual void dodaj_pojazd() = 0;
     virtual void usun_pojazd() = 0;
 
@@ -31,22 +32,23 @@ public:
 class Osobowy: public Pojazd{
 
     private:
-        string typ = "Osobowy";
+        const string typ = "Osobowy";
 
 
     public:
 
         Osobowy(string marka, string model) : Pojazd(marka, model, rok, status_techniczny, dostepnosc, przebieg, sposob_rozl) {}
+        ~Osobowy() override;
 
-        virtual void dodaj_pojazd (){
-
+        void dodaj_pojazd() override{
+            
             cout << "Pojazd typu osobowy został dodany do bazy" << endl;
             cout << marka <<" "<< model <<" "<< typ << endl;
 
         }
 
 
-        virtual void usun_pojazd(){
+        void usun_pojazd() override{
 
 
             cout << "Pojazd osobowy został usunięty z bazy" << endl;
@@ -60,21 +62,24 @@ class Osobowy: public Pojazd{
 class Dostawczy : public Pojazd{
 
     private:
-        string typ = "Dostawczy";
+        const string typ = "Dostawczy";
 
 
     public:
 
         Dostawczy(string marka, string model) : Pojazd(marka, model, rok, status_techniczny, dostepnosc, przebieg, sposob_rozl){}
+        ~Dostawczy() override;
 
-        virtual void dodaj_pojazd(){
+        void dodaj_pojazd() override{
 
             cout << "Pojazd typu dostawczy został dodany do bazy" << endl;
+
+            //Wpisanie do bazy danych logika
             cout << marka <<" "<< model << " "<< typ << endl;
         }
 
-        virtual void usun_pojazd(){
-
+        void usun_pojazd() override{
+            
             cout << "Pojazd typu dostawczy został usunięty z bazy" << endl;
             cout << marka <<" "<< model << " "<< typ << endl;
         }
@@ -86,18 +91,19 @@ class Dostawczy : public Pojazd{
 class Motocykl : public Pojazd{
 
     private:
-        string typ = "Motocykl";
+        const string typ = "Motocykl";
 
     public:
 
         Motocykl(string marka, string model) : Pojazd(marka, model, rok, status_techniczny, dostepnosc, przebieg, sposob_rozl) {}
+        ~Motocykl() override;
 
-        virtual void dodaj_pojazd(){
+        void dodaj_pojazd() override{
             cout << "Pojazd typu motocykl został dodany do bazy" << endl;
             cout << marka <<" "<< model << " "<< typ << endl;
         }
 
-        virtual void usun_pojazd(){
+        void usun_pojazd() override{
             cout << "Pojazd typu motocykl został usunięty z bazy" << endl;
             cout << marka <<" "<< model << " "<< typ << endl;
         }

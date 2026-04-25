@@ -7,7 +7,7 @@ Temat 5: System Zarządzania Flotą Pojazdów (Wypożyczalnia)
 
 Członkowie projektu: Maciej Matuszczyk(L), Aleksander Urban, Michał Żądło, Yurii Tsal-Tsalko
 
-Kolumny bazy danych samochody: ID;Marka;Model;Nadwozie;Rok;Status_techniczny;Dostepnosc;Przebieg;Sposob_rozliczenia;UserID(na razie eksperymentalnie)
+Kolumny bazy danych samochody: ID;Marka;Model;Rok;Status_techniczny;Dostepnosc;Przebieg;Sposob_rozliczenia;UserID(na razie eksperymentalnie)
 
 
 Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .json
