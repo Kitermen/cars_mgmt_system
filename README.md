@@ -7,7 +7,7 @@ Temat 5: System Zarządzania Flotą Pojazdów (Wypożyczalnia)
 
 Członkowie projektu: Maciej Matuszczyk(L), Aleksander Urban, Michał Żądło, Yurii Tsal-Tsalko
 
-Kolumny bazy danych samochody: ID;Marka;Model;Typ;Rok;Status_techniczny;Dostepnosc;Przebieg;:Sposob_rozliczenia
+Kolumny bazy danych samochody: ID;Marka;Model;Nadwozie;Rok;Status_techniczny;Dostepnosc;Przebieg;Sposob_rozliczenia;UserID(na razie eksperymentalnie)
 
 
 Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .json
@@ -17,7 +17,7 @@ Lista funkcjonalności:
   2. Wyświetlenie obecnie dostępnych pojazdów
   3. Wynajęcie / zwrot samochodu
   4. Wyszukiwanie samochodu po atrybucie
-  5. Zmiana Status_techniczny;Dostepnosc;Przebieg;:Sposob_rozliczenia po ID (część edycji)
+  5. Zmiana Status_techniczny;Dostepnosc;Przebieg;Sposob_rozliczenia po ID (część edycji)
 
 Podziłą zadań:
 1. Maciej Matuszczyk - stworzenie main.json i dodanie testowych danych, przygotowanie i wklejenie metod do obsługi jsona
