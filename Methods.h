@@ -1,12 +1,16 @@
 #pragma once
-#include <vector>
 #include <iostream>
 #include <memory>
+#include <vector>
+
 #include "Database.h"
+
+#include "sqlite_orm/include/sqlite_orm/sqlite_orm.h"
 
 using namespace std;
 
 class Methods {
+private:
     Storage &db;
 
 public:
@@ -26,6 +30,34 @@ public:
         for (auto &c : cars) {
             cout << "ID: " << c.ID << " | " << c.Marka << " " << c.Model << endl;
         }
+    }
+
+    void get_available_cars_filter(std::string response) {
+    	    auto cars = db.get_all<Car>(where(like(&Car::Marka, response) || like(&Car::Model, response)));
+    	    if (cars.empty()){    
+	    	std::cout << "\n--- WYNIKI FILTROWANIA ---" << std::endl;	
+		std::cout << "(Brak samochodów o takich parametrach!)" << std::endl;
+    	    }
+    	    else {
+	    	std::cout << "\n--- WYNIKI FILTROWANIA ---" << std::endl;
+	    	for (auto &c : cars) {
+	            	cout << "ID: " << c.ID << " | " << c.Marka << " " << c.Model << ", Rocznik: " << c.Rok << " [" << c.Dostepnosc << "]" << "  Przebieg: " << c.Przebieg << endl;
+	    	}
+    	    }
+    }
+
+    void get_cars_mileage(int mileage){
+    	    auto cars = db.get_all<Car>(where(c(&Car::Przebieg) < mileage));
+    	    if (cars.empty()) {    
+    	    	std::cout << "\n--- WYNIKI FILTROWANIA ---" << std::endl;
+		std::cout << "(Brak samochodów o takich parametrach!)" << std::endl;
+    	    }else{
+
+    	    	std::cout << "\n--- WYNIKI FILTROWANIA ---" << std::endl;
+	    	for (auto &c : cars) {
+	    	        cout << "ID: " << c.ID << " | " << c.Marka << " " << c.Model << ", Rocznik: " << c.Rok << " [" << c.Dostepnosc << "]" << "  Przebieg: " << c.Przebieg << endl;
+	    	}	
+	    }
     }
 
     bool get_rented_cars() {

@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "Methods.h"
 
 using namespace std;
@@ -14,6 +15,8 @@ int main() {
         cout << "2. Wyswietl wszystkie osoby" << endl;
         cout << "3. Wynajmij samochod" << endl;
         cout << "4. Zwroc samochod" << endl;
+        cout << "5. Filtruj po modelu lub marce" << endl;
+        cout << "6. Filtruj po przebiegu" << endl;
         cout << "9. Wyjdz" << endl;
         cout << "Wybor: ";
 
@@ -56,6 +59,20 @@ int main() {
                 action.return_a_car(car_id);
                 break;
             }
+            case 5: {
+			std::string response;
+			std::cout << "Podaj markę lub model: ";
+			std::cin >> response;
+            		action.get_available_cars_filter(response);   
+            		break;
+            	    }
+            case 6: {
+			    int mileage;
+			    std::cout<< "Podaj maksymalny akceptowalny przebieg: ";
+			    std::cin >> mileage;
+			    action.get_cars_mileage(mileage);
+			    break;	
+            	    }
         }
     } 
     while (choice != 9);
