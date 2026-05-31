@@ -26,3 +26,12 @@ Podział zadań:
 4. Yurii Tsal-Tsalko -stworzenie rent.json i dodanie testowych danych
 
 
+Praca nad funckjonalnościami:
+- funckja get_cars_mileage() - zaimplementowana
+- funckja get_available_cars_filter() - zaimplementowana
+- funckja rent_a_car() - zaimplementowana
+- funckja return_a_car() - zaimplementowana
+- reszta użytecznych funkcji filtrujących i sortujących - w trakcie implementacji
+  
+ 
+
