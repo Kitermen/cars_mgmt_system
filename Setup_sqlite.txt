@@ -1,0 +1,8 @@
+(opis w formie która pozwala na odpalenie całości bez większych błędów po drodze)
+1. Zainstaluj sqlite, sqlite viewer
+2. Przygotuj plik .sql z komendami / konfiguracją
+3. Utwórz cars_mgmt_system.db
+4. W Pasku wyszukiwania na górze wpisz: Sqlite: new query
+5. Do nowego okna wklej zawartość pliku .sql
+6. W Pasku wyszukiwania na górze wpisz: Sqlite: run query
+7. Gotowe

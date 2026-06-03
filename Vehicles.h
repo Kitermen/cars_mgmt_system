@@ -18,27 +18,28 @@ struct Car {
     string Sposob_rozliczenia;
 };
 
-class Pojazd {
+
+class Vehicle {
 protected:
-    string marka;
-    string model;
-    int rok;
+    string brand;  
+    string model; 
+    int year;      
 public:
-    virtual ~Pojazd() = default;
-    virtual void wyswietl() const = 0;
+    virtual ~Vehicle() = default;
+    virtual void display() const = 0;
 };
 
-class Osobowy : public Pojazd {
+class PassengerCar : public Vehicle {
 public:
-    void wyswietl() const override { cout << "Osobowy | "; }
+    void display() const override { cout << "Passenger Car | "; }
 };
 
-class Dostawczy : public Pojazd {
+class DeliveryVan : public Vehicle {
 public:
-    void wyswietl() const override { cout << "Dostawczy | "; }
+    void display() const override { cout << "Delivery Van | "; }
 };
 
-class Motocykl : public Pojazd {
+class Motorcycle : public Vehicle {
 public:
-    void wyswietl() const override { cout << "Motocykl | "; }
+    void display() const override { cout << "Motorcycle | "; }
 };

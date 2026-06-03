@@ -4,11 +4,11 @@ DROP TABLE IF EXISTS users;
 
 -- Tabela users
 CREATE TABLE users (
-    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL,
-    phone TEXT,
-    email TEXT UNIQUE
+    userID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Imie TEXT NOT NULL,
+    Nazwisko TEXT NOT NULL,
+    Telefon TEXT,
+    Email TEXT UNIQUE
 );
 
 -- Tabela cars
@@ -26,7 +26,7 @@ CREATE TABLE cars (
 );
 
 -- Wstawianie 20 uzytkownikow (bez polskich znakow)
-INSERT INTO users (firstName, lastName, phone, email) VALUES
+INSERT INTO users (Imie, Nazwisko, Telefon, Email) VALUES
 ('Jan', 'Kowalski', '+48 600 100 200', 'jan.kowalski@example.com'),
 ('Anna', 'Nowak', '+48 511 222 333', 'anna.nowak@example.com'),
 ('Piotr', 'Wisniewski', '+48 700 300 400', 'piotr.wisniewski@test.pl'),
