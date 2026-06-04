@@ -1,0 +1,39 @@
+1. gcc -c sqlite3.c -o sqlite3.o
+2. g++ -std=c++17 main.cpp sqlite3.o -o main.exe -I. -I./sqlite_orm/include
+3. .\main.exe
+
+Przy troubleshootingu kompilowania aplikacji warto zwrócić uwagę na tasks.json 
+(kompliator g++ jest wybredny dla kodu napisanego w C):
+
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-std=c++17",
+                "${fileDirname}\\main.cpp",
+                "${fileDirname}\\sqlite3.c",
+                "-o",
+                "${fileDirname}\\main.exe",
+                "-I", "${fileDirname}",
+                "-I", "${fileDirname}\\sqlite_orm\\include",
+                "-fpermissive"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ],
+    "version": "2.0.0"
+}

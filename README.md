@@ -5,14 +5,15 @@ Temat 5: System Zarządzania Flotą Pojazdów (Wypożyczalnia)
 
 ========================================================================================
 
+Początkowe założenia i ustalenia dot. aplikacji:
+
+
 Członkowie projektu: Maciej Matuszczyk(L), Aleksander Urban, Michał Żądło, Yurii Tsal-Tsalko
 
 Kolumny bazy danych samochody: ID;Marka;Model;Rok;Status_techniczny;Dostepnosc;Przebieg;Sposob_rozliczenia;UserID(na razie eksperymentalnie)
 
 
-Po konsultacji zdecydowaliśmy o wyborze rozszerzenia pliku .json
-
-Lista funkcjonalności: 
+Wstępna lista funkcjonalności: 
   1. Wyświetlenie wszystkich pojazdów
   2. Wyświetlenie obecnie dostępnych pojazdów
   3. Wynajęcie / zwrot samochodu
@@ -26,12 +27,21 @@ Podział zadań:
 4. Yurii Tsal-Tsalko -stworzenie rent.json i dodanie testowych danych
 
 
+========================================================================================
+
+REZULTAT PRACY I OSTATECZNA FORMA APLIKACJI:
+
+
+Baza samochodów i klientów została oparta na sqlite, ze względu na kompatybilność z założeniami, wg których teraz działa aplikacja (operacje na bazie danych, którą można filtrować i wyciągać z niej dane, a plik json, który byłby ciągle pobierany, modyfikowany i zapisywany - nieoptymalne).
+Do komunikacji z bazą danych została wykorzystana lekka biblioteka sqlite_orm.
+
+
 Praca nad funckjonalnościami:
-- funckja get_cars_mileage() - zaimplementowana
-- funckja get_available_cars_filter() - zaimplementowana
+- funckja get_all_cars() - zaimplementowana
+- funckja get_all_clients() - zaimplementowana
 - funckja rent_a_car() - zaimplementowana
 - funckja return_a_car() - zaimplementowana
-- reszta użytecznych funkcji filtrujących i sortujących - w trakcie implementacji
-  
- 
-
+- funckja get_available_cars_filter() - zaimplementowana
+- funckja get_cars_mileage() - zaimplementowana
+- funkcja update_mileage() - zaimplementowana
+- funkcja update_technical_status() - zaimplementowana
