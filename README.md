@@ -24,6 +24,12 @@ Do płynnej komunikacji z bazą danych wykorzystano lekką i nowoczesną bibliot
 
 ========================================================================================
 
+### Struktura aplikacji
+<img width="599" height="445" alt="image" src="https://github.com/user-attachments/assets/5ebd22c6-9a11-4dc9-a829-1ac9a03d9a07" />
+
+
+========================================================================================
+
 ### Informacje o autorach i ich wkładzie
 
 🚶‍➡️ Maciej Matuszczyk(L):
